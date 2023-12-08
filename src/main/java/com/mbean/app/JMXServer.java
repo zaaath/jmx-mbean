@@ -6,7 +6,7 @@ import java.lang.management.ManagementFactory;
  * Hello world!
  *
  */
-public class App
+public class JMXServer
 {
     public static void main( String[] args )
     {
@@ -14,8 +14,8 @@ public class App
 
         try {
           MBeanServer mbs = ManagementFactory.getPlatformMBeanServer();
-          ObjectName name = new ObjectName("com.mbean.app:type=HelloWorld");
-          HelloWorld mbean = new HelloWorld();
+          ObjectName name = new ObjectName("com.mbean.app:type=SampleProvider");
+          SampleProvider mbean = new SampleProvider();
           mbs.registerMBean(mbean, name);
         } catch (Exception e) {
           System.out.println(e);

@@ -3,12 +3,12 @@ package com.mbean.app;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class HelloWorld implements HelloWorldMBean {
+public class SampleProvider implements SampleProviderMBean {
   private String message = "Initial Message";
   private int counter = 0;
   private Timer timer;
 
-  public HelloWorld() {
+  public SampleProvider() {
     startCounterUpdateTask();
   }
 
